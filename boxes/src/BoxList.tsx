@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
+import { IBox } from "./interfaces";
 
 /** Manage list of boxes
  *
  * State:
  * - boxes: [ { id, width, height, backgroundColor }, ... ]
  */
-
-function BoxList() {
-  const [boxes, setBoxes] = useState([])
+function BoxList(): JSX.Element {
+  const [boxes, setBoxes] = useState<IBox[]>([])
 
   /** add box with given { id, width, height, backgroundColor } */
-  function add(newBox) {
+  function add(newBox: IBox): void {
     setBoxes(boxes => [...boxes, newBox]);
   }
 

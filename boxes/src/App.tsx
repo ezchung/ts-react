@@ -1,6 +1,11 @@
+import React from "react";
 import BoxList from "./BoxList";
 
-function App() {
+/**
+ * 
+ * App => BoxList
+ */
+function App(): JSX.Element{
   return (
     <div>
       <BoxList />
